@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    
+    <style>
+        @import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            min-width: 100vh;
+            background: #041f2c;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .container{
+            height: 300px;
+            width: 100%;
+            border-bottom: #000;
+            border-bottom-style: solid;
+            border-bottom-width: .5rem;
+        }
+
+        img{
+            height: 300px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: 100 100;
+        }
+
+        h1{
+            color: #fff;
+            font-size: 2rem;
+            margin-top: -285px;
+            margin-left: 35px;
+        }
+
+        a img{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            top: 15px;
+            left: 150px;
+        }
+
+        .content{
+            position: absolute;
+        }
+
+        .content h1{
+            position: relative;
+            font-size: 1.2rem;
+			color: #fff;
+			font-weight: 500;
+			left: 400px;
+            top: -30px;
+            word-spacing: 500px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .search{
+            position: absolute;
+            left: 800px;
+            top: 5px;
+        }
+
+		.srch{
+			font-family: 'Times New Roman';
+			width: 200px;
+			height: 18px;	
+			background: #120d0dd4;
+			border: .2rem solid #023047;
+            border-radius: 2em 2em;
+			margin-top: 13px;
+			color: #fff;
+			font-size: 1.2em;
+			padding: 10px;
+            transition: .5s ease;
+		}
+
+        .srch.focus{
+            color: #fff;
+            box-shadow: 0px 0px 10px #fff;
+            font-weight: 600;
+            font-family: Arial;
+        }
+		
+        .logo2{
+            position: absolute;
+            top: 10px;
+            left: 80%;
+            background-image: url('Black_kurta.jpeg');
+            background-size: cover;
+            width: 80px;
+            height: 80px;
+            border: .2rem solid #fff;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px #fff;
+        }
+
+        .on-off{
+            position: absolute;
+            top: 110px;
+            left: 10px;
+        }
+
+        .on-off img{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            transform: rotate(-90deg);
+        }
+
+        .about{
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            font-size: xx-large;
+            font-weight: 900;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: antiquewhite;
+        }
+
+        .info{
+            position: absolute;
+            top: 41%;
+            left: 40%;
+            font-size: x-large;
+            font-weight: 100;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #faebd778;
+        }
+
+        span{
+            position: absolute;
+            top: 41%;
+            left: 47%;
+            font-size: x-large;
+            font-weight: 600;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #fff;
+        }
+
+        h2{
+            position: absolute;
+            top: 280px;
+            left: -40px;
+            font-size: x-large;
+            font-weight: 900;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: antiquewhite;
+            transform: rotate(-90deg);
+        }
+
+        h2 img{
+            position: absolute;
+            top: 0;
+            left: -30px;
+            width: 30px;
+            height: 30px;
+            text-decoration: none;
+        }
+
+        .wrapper{
+            position: absolute;
+            top: 310px;
+            left: 0;
+            height: 500px;
+            width: 100%;
+            border: none;
+        }
+
+        .image{
+            margin-left: 90px;
+            margin-top: 100px;
+            width: 280px;
+            height: 380px;
+            background: linear-gradient(135deg, #ae2012, #5641cb, #ec0868, #e70e02, #ff0f80);
+            border-radius: 10pt;
+        }
+        .image img{
+            padding: 10px;
+            height: 400px;
+            width: 300px;
+            border-radius: 20pt;
+        }
+
+        .creative{
+            position: absolute;
+            left: 30%;
+            top: 85%;
+        }
+
+        .creative h1{
+            font-size: larger;
+            font-weight: 400;
+            font-family: 'Times New Roman', Times, serif;
+            color: #5641cb;
+            text-decoration: none;
+        }
+
+        .creative1{
+            position: absolute;
+            left: 30%;
+            top: 90%;
+        }
+
+        .creative1 h1{
+            font-size: 1.9em;
+            word-spacing: 1px;
+            font-weight: 400;
+            font-family: 'Times New Roman', Times, serif;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .paragraph{
+            margin-left: 440px;
+            margin-top: -230px;
+            height: 400px;
+            width: 650px;
+        }
+
+        .paragraph p{
+            color: #faebd778;
+            font-size: large;
+            font-weight: 400;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        button{
+            margin-left: 10px;
+            margin-top: 30px;
+            width: 130px;
+            height: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: Arial;
+            color: #fff;
+            border: .2rem solid #5641cb;
+            border-radius: 2em 2em;
+            background: #5641cb;
+        }
+
+        .navbar{
+            position: absolute;
+            height: 400px;
+            min-width: 100vh;
+            top: 900px;
+            left: 10px;
+        }
+
+        .navbar h3{
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: x-large;
+            margin-left: 180px;
+        }
+
+        .navbar p{
+            margin-left: 270px;
+            text-align: center;
+            color: #faebd778;
+            font-weight: 100;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .nav{
+            margin-top: 360px;
+        }
+
+        .nav h1{
+            margin-left: 150px;
+            color: #fff;
+            font-size: 3em;
+            font-weight: 600;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .nav p{
+            font-size: large;
+            position: absolute;
+            left: -120px;
+        }
+
+        .nav2{
+            margin-top: 235px;
+        }
+
+        .nav2 h1{
+            margin-left: 600px;
+            color: #fff;
+            font-size: 3em;
+            font-weight: 600;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .nav2 p{
+            font-size: large;
+            position: absolute;
+            left: 330px;
+        }
+
+        .nav3{
+            margin-top: 230px;
+        }
+
+        .nav3 h1{
+            margin-left: 1000px;
+            color: #fff;
+            font-size: 3em;
+            font-weight: 600;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .nav3 p{
+            font-size: large;
+            position: absolute;
+            left: 750px;
+        }
+
+        .navbar h5{
+            font-size: larger;
+            color: #5641cb;
+            margin-top: 6%;
+            margin-left: 54%;
+        }
+
+        .navbar h4{
+            font-size: xx-large;
+            font-weight: 600;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #fff;
+            margin-top: 2%;
+            margin-left: 47%;
+        }
+
+        .word p{
+            margin-left: 170px;
+        }
+
+        .team-pic{
+            text-decoration: none;
+            position: absolute;
+            top: 220%;
+            left: 100px;
+        }
+
+        .team-pic a{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 230px;
+            width: 230px;
+            text-decoration: none;
+            border: .2rem solid #fff;
+            border-radius: 50%;
+        }
+
+        .team-pic a img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 230px;
+            width: 230px;
+            text-decoration: none;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        .team-pic a h2{
+            position: absolute;
+            left: 50px;
+            top: 255px;
+            font-weight: 600;
+            font-size: x-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #fff;
+            transform: rotate(360deg);
+        }
+
+        .team-pic a h5{
+            position: absolute;
+            top: 250px;
+            left: 75px;
+            line-height: 100px;
+            font-weight: 100;
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
+            color: #faebd778;
+            text-decoration: none;
+        }
+
+        .team-pic2{
+            text-decoration: none;
+            position: absolute;
+            top: 220%;
+            left: 400px;
+        }
+
+        .team-pic2 a{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 230px;
+            width: 230px;
+            text-decoration: none;
+            border: .2rem solid #fff;
+            border-radius: 50%;
+        }
+
+        .team-pic2 a img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 230px;
+            width: 230px;
+            text-decoration: none;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        .team-pic2 a h2{
+            position: absolute;
+            left: 50px;
+            top: 255px;
+            font-weight: 600;
+            font-size: x-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #fff;
+            transform: rotate(360deg);
+        }
+
+        .team-pic2 a h5{
+            position: absolute;
+            top: 250px;
+            left: 75px;
+            line-height: 100px;
+            font-weight: 100;
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
+            color: #faebd778;
+            text-decoration: none;
+        }
+
+        .team-pic3{
+            text-decoration: none;
+            position: absolute;
+            top: 220%;
+            left: 700px;
+        }
+
+        .team-pic3 a{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 230px;
+            width: 230px;
+            text-decoration: none;
+            border: .2rem solid #fff;
+            border-radius: 50%;
+        }
+
+        .team-pic3 a img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 230px;
+            width: 230px;
+            text-decoration: none;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        .team-pic3 a h2{
+            position: absolute;
+            left: 50px;
+            top: 255px;
+            font-weight: 600;
+            font-size: x-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #fff;
+            transform: rotate(360deg);
+        }
+
+        .team-pic3 a h5{
+            position: absolute;
+            top: 250px;
+            left: 75px;
+            line-height: 100px;
+            font-weight: 100;
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
+            color: #faebd778;
+            text-decoration: none;
+        }
+
+        .team-pic4{
+            text-decoration: none;
+            position: absolute;
+            top: 220%;
+            left: 1000px;
+        }
+
+        .team-pic4 a{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 230px;
+            width: 230px;
+            text-decoration: none;
+            border: .2rem solid #fff;
+            border-radius: 50%;
+        }
+
+        .team-pic4 a img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 230px;
+            width: 230px;
+            text-decoration: none;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        .team-pic4 a h2{
+            position: absolute;
+            left: 50px;
+            top: 255px;
+            font-weight: 600;
+            font-size: x-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #fff;
+            transform: rotate(360deg);
+        }
+
+        .team-pic4 a h5{
+            position: absolute;
+            top: 250px;
+            left: 75px;
+            line-height: 100px;
+            font-weight: 100;
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
+            color: #faebd778;
+            text-decoration: none;
+        }
+
+        section{
+            position: absolute;
+            top: 335%;
+            min-width: 100vh;
+        }
+
+        section h6{
+            position: absolute;
+            top: -300px;
+            left: 45%;
+            color: #5641cb;
+            font-size: 1.5em;
+        }
+
+        section h1{
+            position: absolute;
+            top: 30px;
+            left: 240px;
+            font-weight: 600;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: xx-large;
+            color: #fff;
+        }
+
+        section p{
+            margin-top: -190px;
+            margin-left: 120px;
+            font-size: large;
+            color: #faebd778;
+        }
+
+        .project1{
+            position: absolute;
+            top: -90px;
+            left: -200px;
+            height: 500px;
+            width: 350px;
+            border: 2px solid #023047;
+            border-radius: 10pt;
+        }
+
+        .project1 img{
+            position: absolute;
+            width: 350px;
+            height: 260px;
+            border-bottom: .1rem solid black;
+            border-radius: 10pt;
+        }
+
+        .project1 button{
+            position: absolute;
+            top: 215px;
+            left: 5px;
+            width: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .project1 h2{
+            position: absolute;
+            top: 290px;
+            left: 30px;
+            color: #faebd778;
+            transform: rotate(360deg);
+            font-size: 15px;
+            
+        }
+
+        .project1 h3{
+            position: absolute;
+            top: 290px;
+            left: 230px;
+            color: #faebd778;
+            font-size: 15px;
+        }
+
+        .project1 p{
+            position: absolute;
+            top: 530px;
+            left: -80px;
+            color: #fff;
+            font-size: x-large;
+        }
+
+        .project1 h4{
+            position: absolute;
+            top: 460px;
+            left: 10px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        .project1 span{
+            position: absolute;
+            top: 460px;
+            left: 220px;
+            color: #faebd778;
+            font-size: 1.2em;
+        }
+
+        .project1 h5{
+            position: absolute;
+            top: 460px;
+            left: 245px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        .project2{
+            position: absolute;
+            top: -90px;
+            left: 230px;
+            height: 500px;
+            width: 350px;
+            border: 2px solid #023047;
+            border-radius: 10pt;
+        }
+
+        .project2 img{
+            position: absolute;
+            width: 350px;
+            height: 260px;
+            border-bottom: .1rem solid black;
+            border-radius: 10pt;
+        }
+
+        .project2 button{
+            position: absolute;
+            top: 215px;
+            left: 5px;
+            width: 100px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .project2 h2{
+            position: absolute;
+            top: 290px;
+            left: 30px;
+            color: #faebd778;
+            transform: rotate(360deg);
+            font-size: 15px;
+            
+        }
+
+        .project2 h3{
+            position: absolute;
+            top: 290px;
+            left: 230px;
+            color: #faebd778;
+            font-size: 15px;
+        }
+
+        .project2 p{
+            position: absolute;
+            top: 530px;
+            left: -80px;
+            color: #fff;
+            font-size: x-large;
+        }
+
+        .project2 h4{
+            position: absolute;
+            top: 460px;
+            left: 10px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        .project2 span{
+            position: absolute;
+            top: 460px;
+            left: 220px;
+            color: #faebd778;
+            font-size: 1.2em;
+        }
+
+        .project2 h5{
+            position: absolute;
+            top: 460px;
+            left: 245px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        .project3{
+            position: absolute;
+            top: -90px;
+            left: 670px;
+            height: 500px;
+            width: 350px;
+            border: 2px solid #023047;
+            border-radius: 10pt;
+        }
+
+        .project3 img{
+            position: absolute;
+            width: 350px;
+            height: 260px;
+            border-bottom: .1rem solid black;
+            border-radius: 10pt;
+        }
+
+        .project3 button{
+            position: absolute;
+            top: 215px;
+            left: 5px;
+            width: 70px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .project3 h2{
+            position: absolute;
+            top: 290px;
+            left: 30px;
+            color: #faebd778;
+            transform: rotate(360deg);
+            font-size: 15px;
+            
+        }
+
+        .project3 h3{
+            position: absolute;
+            top: 290px;
+            left: 230px;
+            color: #faebd778;
+            font-size: 15px;
+        }
+
+        .project3 p{
+            position: absolute;
+            top: 530px;
+            left: -80px;
+            color: #fff;
+            font-size: x-large;
+        }
+
+        .project3 h4{
+            position: absolute;
+            top: 460px;
+            left: 10px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        .project3 span{
+            position: absolute;
+            top: 460px;
+            left: 220px;
+            color: #faebd778;
+            font-size: 1.2em;
+        }
+
+        .project3 h5{
+            position: absolute;
+            top: 460px;
+            left: 245px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        .box{
+            position: absolute;
+            top: 500px;
+            left: -205px;
+            background: #041f2c;
+            border: 2px solid #023047;
+            border-radius: 5pt;
+            width: 150%;
+            height: 100px;
+            min-width: 100vh;
+        }
+
+
+        .box .para{
+            position: absolute;
+        }
+
+        .box .para h1{
+            position: absolute;
+            top: 305px;
+            left: 10px;
+            color: #fff;
+            font-size: xx-large;
+            font-weight: 400;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .box .para p{
+            margin-top: 60px;
+            margin-left: 10px;
+        }
+
+        .box .email{
+            position: absolute;
+            top: 40px;
+            left:55%;
+        }
+
+        .email input{
+            height: 30px;
+            width: 300px;
+            font-size: 18px;
+            font-weight: 500;
+            font-family: 'Times New Roman', Times, serif;
+            border: 2px solid #023047;
+            border-radius: 2em 2em;
+            background: #041f2c;
+        }
+
+        .email input:focus{
+            color: #fff;
+        }
+
+        .email button{
+            position: absolute;
+            top: -27px;
+            left: 300px;
+        }
+
+        .sect{
+            position: absolute;
+            top: 420%;
+            left: 0;
+            width: 100%;
+            height: 600px;
+            z-index: -1;
+            background: #023047;
+        }
+
+        .sect h1{
+            position: absolute;
+            top: 430px;
+            left: 10px;
+            color: #fff;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 600;
+            font-size: xx-large;
+        }
+
+        .sect img{
+            position: absolute;
+            top: 150px;
+            left: 160px;
+            height: 35px;
+            width: 35px;
+        }
+
+        .sect p{
+            position: absolute;
+            top: 400px;
+            left: -77px;
+        }
+
+        .sect .giglink{
+            position: absolute;
+            top: 0;
+            left: 530px;
+        }
+
+        .giglink h1{
+            position: absolute;
+        }
+
+        .giglink ul{
+            position: absolute;
+            top: 200px;
+            left: 50px;
+            text-decoration: none;
+        }
+
+        .giglink ul li a{
+            text-decoration: none;
+            color: #faebd778;
+            line-height: 25px;
+            font-weight: 100;
+            transition: .5s ease;
+        }
+
+        .giglink ul li a:hover{
+            text-decoration-line: underline;
+            color: #fff;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .sect .usefull-link{
+            position: absolute;
+            top: 0;
+            left: 700px;
+        }
+
+        .usefull-link h1{
+            position: absolute;
+        }
+
+        .usefull-link ul{
+            position: absolute;
+            top: 200px;
+            left: 50px;
+            text-decoration: none;
+        }
+
+        .usefull-link ul li a{
+            text-decoration: none;
+            color: #faebd778;
+            line-height: 25px;
+            font-weight: 100;
+        }
+
+        .usefull-link ul li a:hover{
+            text-decoration-line: underline;
+            color: #fff;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .contain{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .contain h1{
+            position: absolute;
+            color: #fff;
+            top: 420px;
+            left: 850px;
+        }
+
+        .black-content{
+            position: absolute;
+            top: 220px;
+            left: 70%;
+            width: 150px;
+            height: 50px;
+            background: #000;
+            border-radius: 5pt 5pt 5pt 5pt;
+            transition: .5s ease;
+        }
+
+        .black-content:hover{
+            transform: scale(1.3);
+        }
+
+        .black-content h1{
+            position: absolute;
+            top: 305px;
+            left: 10px;
+            font-size: 1.5em;
+        }
+
+        .black-content i{
+            position: absolute;
+            top: 5px;
+            left: -4px;
+            font-size: 2.7em;
+            color: #fff;
+        }
+
+        .black-content p{
+            color: #fff;
+            font-size: small;
+            margin-top: -397px;
+            margin-left: 120px;
+        }
+
+        .black-content1{
+            position: absolute;
+            top: 220px;
+            left: 83%;
+            width: 150px;
+            height: 50px;
+            background: #000;
+            border-radius: 5pt 5pt 5pt 5pt;
+            transition: .5s ease;
+        }
+
+        .black-content1:hover{
+            transform: scale(1.3);
+        }
+
+        .black-content1 h1{
+            position: absolute;
+            top: 305px;
+            left: -5px;
+            font-size: 1.5em;
+        }
+
+        .black-content1 i{
+            position: absolute;
+            top: 5px;
+            left: -4px;
+            font-size: 2.7em;
+            color: #fff;
+        }
+
+        .black-content1 p{
+            color: #fff;
+            font-size: small;
+            margin-top: -397px;
+            margin-left: 120px;
+        }
+
+       .icons{
+        position: absolute;
+        top: 100%;
+        left: 70%;
+       }
+
+       .icons ul li{
+        text-decoration: none;
+        color: #fff;
+       }
+
+       .icons ul li a{
+        margin-top: 20px;
+        color: #fff;
+        font-size: 2em;
+        word-spacing: 50px;
+        display: inline-block;
+        justify-content: space-between;
+        transition: .5s ease;
+       }
+
+       .icons ul li a:hover{
+        color: #faebd778;
+       }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <img src="C:\Users\King MA sheikh\Desktop\Images\demons.jpg">
+        <h1>IT Tech</h1>
+        <a href="#"><img src="C:\Users\King MA sheikh\Desktop\Images\Pentagram.png" alt=""></a>
+        <div class="content">
+            <h1>Home</h1>
+            <h1>Explore</h1>
+            <h1>Pages</h1>
+            <h1>Contact</h1>
+        </div>
+        <div class="search">
+            <input class="srch" type="serach" name="" placeholder="Search...">
+        </div>
+        <div class="logo2"></div>
+        <div class="on-off">
+            <img src="C:\Users\King MA sheikh\Desktop\Images\on_off.png" alt="">
+        </div>
+        <div class="about">About Us</div>
+        <div class="info">IT Tech :</div>
+        <span>About Us</span>
+    </div>
+    <h2><img src="C:\Users\King MA sheikh\Desktop\Images\download.png" alt="">Download</h2>
+    <div class="wrapper">
+        <div class="image">
+            <img src="C:\Users\King MA sheikh\Desktop\Images\Black_kurta.jpeg" alt="">
+        </div>
+        
+        <div class="creative">
+            <h1>Creative Vision & Design</h1>
+        </div>
+
+        <div class="creative1">
+            <h1>We develope & create<br>digital art
+            </h1>
+        </div>
+
+        <div class="paragraph">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique aliquam eius mollitia recusandae eligendi ipsum asperiores illo?</p>
+            <br><br>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum asperiores consectetur sequi quod, aspernatur repellendus tenetur tempora animi excepturi quis, esse maxime quaerat perferendis architecto nam adipisci modi corporis accusantium necessitatibus iure ex. Sint iste atque odio consequatur tempore velit!</p>
+
+            <button>Contact us 
+                <i class="bx bxs-user"></i>   
+            </button>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <h3>Trusted by more than 20K users</h3>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ducimus repudiandae voluptate corporis maiores, harum, <br>delectus iure perferendis, provident ipsa numquam! Optio provident placeat excepturi?</p>
+        
+        <div class="nav">
+            <h1>$40M</h1>
+            <p>Trading Volume</p>
+        </div>
+
+        <div class="nav2">    
+            <h1>200+</h1>
+            <p>NFT's created</p>
+        </div>
+        <div class="nav3">
+            <h1>253K</h1>
+            <p>Total user</p>
+        </div>
+        <h5>Our March</h5>
+        <h4>Management Team</h4>
+        <br>
+        <div class="word">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eligendi corporis<br> in iusto doloremque est error distinctio id odio consequatur.</p>
+        </div>
+        <br><br><br>
+    </div>
+    
+    <div class="team-pic">
+        <a href="#"><img src="C:\Users\King MA sheikh\Desktop\Images\Jack&John.jpg" alt=""><h2>Jack John</h2> <h5>Designer</h5></a>
+    </div>
+
+    <div class="team-pic2">
+        <a href="#"><img src="C:\Users\King MA sheikh\Desktop\Images\Krista_John.jpg" alt=""><h2>Krista John</h2> <h5>Designer</h5></a>
+    </div>
+
+    <div class="team-pic3">    
+        <a href="#"><img src="C:\Users\King MA sheikh\Desktop\Images\Roger_Jackson.jpg" alt=""><h2>Roger Jakson</h2> <h5>Designer</h5></a>
+    </div>
+
+    <div class="team-pic4">    
+        <a href="#"><img src="C:\Users\King MA sheikh\Desktop\Images\Johnny_Depp.jpg" alt=""><h2>Johnny English</h2> <h5>Designer</h5></a>
+    </div>
+
+    <section>
+        <h6>Our March</h6>
+        <h1>Latest Blog or News</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo amet dolor, earum dicta, perspiciatis</p>
+
+        <div class="project1">
+            <img src="C:\Users\King MA sheikh\Desktop\Images\deep_impressions.jpg" alt="">    
+            <button>Art</button>
+            <h2><i class="bx bxs-calendar"></i>20th October 2022</i></h2>
+            <h3>🌏 5 min read</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, corrupti.</p>
+            <h4>Read more +</h4>
+            <span>by</span>
+            <h5>@StreatBoy</h5>   
+        </div>
+
+        <div class="project2">
+            <img src="C:\Users\King MA sheikh\Desktop\Images\Dark_Forests.jpg" alt="">    
+            <button>Subscribe</button>
+            <h2><i class="bx bxs-calendar"></i>20th October 2022</i></h2>
+            <h3>🌏 5 min read</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, corrupti.</p>
+            <h4>Read more +</h4>
+            <span>by</span>
+            <h5>@CuteGirl</h5>   
+        </div>
+
+        <div class="project3">
+            <img src="C:\Users\King MA sheikh\Desktop\Images\Sahara_Desert.jpg" alt="">    
+            <button>Music</button>
+            <h2><i class="bx bxs-calendar"></i>20th October 2022</i></h2>
+            <h3>🌏 5 min read</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, corrupti.</p>
+            <h4>Read more +</h4>
+            <span>by</span>
+            <h5>@Butterfly</h5>   
+        </div>
+        <br><br><br><br>
+
+        <div class="box">
+            <div class="para">
+                <h1>Subscribe to Newsletter!</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, doloremque!</p>
+            </div>
+
+            <div class="email">
+                <input type="email" name="" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="sect">
+        <h1>IT Tech</h1>
+        <img src="C:\Users\King MA sheikh\Desktop\Images\Pentagram.png" alt="">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus <br>quo voluptatum nesciunt cupiditate!</p>
+
+        <div class="giglink">
+            <h1>Giglink</h1>
+            <ul type="none">
+                <li><a href="#">Explore_Item</a></li>
+                <li><a href="#">Live_Auction</a></li>
+                <li><a href="#">Activities</a></li>
+                <li><a href="#">Wallets</a></li>
+                <li><a href="#">Creators</a></li>
+            </ul>
+        </div>
+
+        <div class="usefull-link">
+            <h1>Link</h1>
+            <ul type="none">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Blog_News</a></li>
+                <li><a href="#">Term_Condition</a></li>
+                <li><a href="#">Privacy_Policy</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="contain">
+            <h1>Download_the_Giglink_app</h1>
+        </div>
+
+        <div class="black-content">
+            <h1>AppStore</h1>
+            <p>Lorem ipsum dolor.</p>
+            <i class="bx bxl-apple"></i>
+        </div>
+
+        <div class="black-content1">
+            <h1>GooglePlay</h1>
+            <p>Lorem ipsum dolor.</p>
+            <i class="bx bxl-playstore"></i>
+        </div>
+
+        <div class="icons">
+            <ul type="none">
+                <li><a href="https://twitter.com/login"><ion-icon name="logo-Twitter"></ion-icon></a>
+                <a href="https://www.facebook.com"><ion-icon name="logo-Facebook"></ion-icon></a>
+                <a href="https://www.instagram.com"><ion-icon name="logo-Instagram"></ion-icon></a>
+                <a href="https://www.skype.com/en"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+            </ul>
+        </div>
+
+    </section>
+
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+</html>
